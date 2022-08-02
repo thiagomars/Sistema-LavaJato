@@ -81,6 +81,7 @@ input{
         transform: translate(-50%,-50%);
         border-radius: 40px;
         background-color: white;
+        margin-top: -50%;
     }
 
     .conteiner-grande div{

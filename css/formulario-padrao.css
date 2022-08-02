@@ -90,11 +90,11 @@ article{
 
 @media (orientation: portrait){
     body{
-        font-size: 1em;
+        font-size: 2.4em;
     }
 
     #logo{
-        width: 60vw;
+        width: 75vw;
         height: auto;
         margin: 5vw;
     }
