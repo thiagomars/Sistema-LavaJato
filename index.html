@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Lava Jato</title>
+        <link href="css/style-home.css" rel="stylesheet" type="text/css">
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript" src="functions/jquery-3.6.0.min.js"></script>
+
+        <script type="text/javascript" src="functions/simple-function.js"></script>
+
+    </head>
+    <body>
+        
+        <section>
+            <header>
+                <div id="logo">
+                    <img src="imgs/logo.png" alt="Sistema Lava Jato">
+                </div>
+                <nav> <!--Menu vertical-->
+                    <div>
+                        <div class="option" id="clientes">
+                            <span class="menu">Meus Clientes</span>
+                            <div class="item">
+                                <a href="cadastros/cadastro-cliente.html" class="submenu">Cadastrar</a>
+                                <a href="*" class="submenu">Buscar</a>
+                            </div>
+                        </div>
+
+                        <div class="option" id="carros">
+                            <span class="menu">Meus carros e motos</span>
+                            <div class="item">
+                                <a href="cadastros/cadastro-marca.html" class="submenu">Cadastrar marca</a>
+                                <a href="cadastros/cadastro-modelo.html" class="submenu">Cadastrar modelo</a>
+                                <a href="*" class="submenu">Listar todos</a>
+                            </div>
+                        </div>
+
+                        <div class="option" id="service">
+                            <span class="menu">Ordem de serviço</span>
+                            <div class="item">
+                                <a href="*" class="submenu">Cadastrar</a>
+                                <a href="*" class="submenu">Pendentes</a>
+                                <a href="*" class="submenu">Finalizados</a>
+                                <a href="*" class="submenu">Listar todo histórico</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="option" id="exit">
+                        <img src="imgs/off.png" alt="Sair/Fechar Sistema">
+                        <span>Sair / Fazer Logoff</span>
+                    </div>
+                </nav>
+            </header>
+            
+            <article class="intro">
+                <div class="dashboard intro-container">
+                    <!--Dashboard-->
+                    <h1>Serviços mais solicitados</h1>
+                    <div id="graficoPizza" style="width: 80%; height: 40%;"></div>
+                    <form>
+                        <div class="filter">
+                            <label for="inicio">Data inicial:</label>
+                            <input type="date" name="incio">
+                        </div>
+                        <div class="filter">
+                            <label for="fim">Data final:</label>
+                            <input type="date" name="fim">
+                        </div>
+                    </form>
+
+                    <div class="result">
+                        <p>Média de atentimento para o período:</p>
+                        <h2>35 minutos</h2>
+                    </div>
+                </div>
+
+                <div class="atendimentos intro-container">
+                    <!--Últimos atendimentos-->
+                    <h1>Últimos atendimentos</h1>
+                    <div class="history" id="history">
+                        <div class="registro">
+                            <img src="imgs/ideia.png">
+                            <div class="dados-cliente">
+                                <p>Cliente: José Santos</p>
+                                <p>Serviço: Lavagem Simples</p>
+                            </div>
+                            <div class="dados-carro">
+                                <p>Placa: ABC-1234</p>
+                                <p>Modelo: Carro</p>
+                            </div>
+                        </div>
+                        <div class="registro">
+                            <img src="imgs/cancelar.png">
+                            <div class="dados-cliente">
+                                <p>Cliente: Raimundo Raimundes</p>
+                                <p>Serviço: Lavagem Completa</p>
+                            </div>
+                            <div class="dados-carro">
+                                <p>Placa: DEF-5678</p>
+                                <p>Modelo: Carro</p>
+                            </div>
+                        </div>
+                        <div class="registro">
+                            <img src="imgs/verifica.png">
+                            <div class="dados-cliente">
+                                <p>Cliente: Maria Joana</p>
+                                <p>Serviço: Lavagem Simples</p>
+                            </div>
+                            <div class="dados-carro">
+                                <p>Placa: PSO-1346</p>
+                                <p>Modelo: Moto</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </body>
+</html>

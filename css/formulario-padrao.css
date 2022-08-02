@@ -1,0 +1,128 @@
+h1{
+    font-weight: 800;
+    font-size: 1.4em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+label{
+    display: inline-block;
+    font-size: 0.8em;
+    margin-top: 12px;
+}
+
+span{
+    color: #FF6363;
+    display: inline-block;
+    font-size: 0.7em;
+    margin-top: 12px;
+    visibility: hidden;
+}
+
+input, select{
+    display: inline-block;
+    font-size: 0.8em;
+    margin-top: 2px;
+    padding: 5px 2px;
+    border: 1px solid #b3b3b3;
+}
+
+article{
+    margin: 5% 5% 2% 5%;
+}
+
+.border-circ{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 40px;
+    background-color: white;
+}
+
+.botoes{
+    width: 100%;
+}
+
+.botoes p{
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    border: 0px;
+    border-radius: 500px;
+    margin-top: 4%;
+    margin-right: 10px;
+    box-shadow: 4px 4px 2px #F2F2F2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botoes .cancelar{
+    background-color: #F2F2F2;
+}
+
+.botoes .cancelar:hover{
+    background-color: #e2e2e2;
+}
+
+.botoes .cadastrar{
+    background-color: #63FF69;
+}
+
+.botoes .cadastrar:hover{
+    background-color: #40e946;
+}
+
+.botoes .finalizar{
+    background-color: #FF6363;
+}
+
+.botoes .finalizar:hover{
+    background-color: #ec4545;
+}
+
+#logo{
+    height: 40px;
+    margin: 20px;
+}
+
+@media (orientation: portrait){
+    body{
+        font-size: 1em;
+    }
+
+    #logo{
+        width: 60vw;
+        height: auto;
+        margin: 5vw;
+    }
+
+    label{
+        display: inline-block;
+        font-size: 1em;
+        margin-top: 3vh;
+    }
+    
+    span{
+        color: #FF6363;
+        display: inline-block;
+        font-size: 0.7em;
+        margin-top: 12px;
+        visibility: hidden;
+    }
+    
+    input, select{
+        display: inline-block;
+        font-size: 1em;
+        margin-top: 1vh;
+        padding: 1vh 1vh;
+        border: 1px solid #b3b3b3;
+    }
+
+    select option{
+        font-size: 0.5em;
+    }
+
+}

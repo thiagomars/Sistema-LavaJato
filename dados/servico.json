@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "iniciado": "20-04-2022",
+        "final": "21-04-2022",
+        "status": "finalizado",
+        "id-cliente": 2,
+        "marca": "Honda",
+        "modelo": "carro",
+        "placa": "ABC-1234",
+        "servicos": ["lavagem simples", "lavagem do motor"]
+    },
+    {
+        "id": 2,
+        "iniciado": "20-07-2022",
+        "final": "21-07-2022",
+        "status": "finalizado",
+        "id-cliente": 2,
+        "marca": "Honda",
+        "modelo": "carro",
+        "placa": "ABC-1234",
+        "servicos": ["lavagem simples"]
+    }
+]

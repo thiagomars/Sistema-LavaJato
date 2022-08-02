@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Lava Jato</title>
+        <link href="../css/style-service.css" rel="stylesheet" type="text/css">
+        <script src="../functions/simple-function.js"></script>
+    </head>
+    <body>
+        <div class="conteiner">
+            <section class="atendimento">
+                <img src="../imgs/logo.png" id="logo">
+                <article>
+                    <h1>Atendimento #00</h1>
+                    <form method="get" action="." class="form-many">
+                        <div class="caixa">
+                            <label for="registro">Data registro:</label>
+                            <br>
+                            <input type="date" name="registro">
+                        </div>
+                        
+                        <div class="caixa">
+                            <label for="final">Data finalização:</label>
+                            <br>
+                            <input type="date" name="final">
+                        </div>
+
+                        <div class="caixa">
+                            <label for="status">Status:</label>
+                            <br>
+                            <select name="status">
+                                <option value="">Selecionar...</option>
+                                <option value="">Em atendimento</option>
+                                <option value="">Finalizado</option>
+                                <option value="">Cancelado</option>
+                            </select>
+                        </div>
+
+                        <div class="caixa-grande">
+                            <label for="cliente">Cliente:</label>
+                            <br>
+                            <input type="text" name="cliente" id="cliente">
+                        </div>
+
+                        <div class="caixa">
+                            <label for="telefone">Telefone:</label>
+                            <br>
+                            <input name="telefone" type="number"/></label>
+                        </div>
+
+                        <p id="mostrar-dados">Visualizar dados completos do cliente.</p>
+
+                        <div class="caixa">
+                            <label for="marca">Marca do veículo:</label>
+                            <br>
+                            <select name="marca">
+                                <option value="">Selecionar...</option>
+                                <option value="">Honda</option>
+                                <option value="">Corolla</option>
+                                <option value="">Jeep</option>
+                                <option value="">Fiat</option>
+                                <option value="">Yamaha</option>
+                            </select>
+                        </div>
+                        
+                        <div class="caixa">
+                            <label for="modelo">Modelo do veículo:</label>
+                            <br>
+                            <select name="modelo">
+                                <option value="">Selecionar...</option>
+                                <option value="">Carro</option>
+                                <option value="">Moto</option>
+                            </select>
+                        </div>
+
+                        <div class="caixa">
+                            <label for="placa">Placa:</label>
+                            <br>
+                            <input type="text" name="placa" style="text-transform: uppercase;">
+                        </div>
+                        <br>
+                        
+                        <span>:-Algo aqui digitado-: já existe.</span>
+                        <div class="botoes">
+                            <p class="cancelar" onclick="pagInicial();">CANCELAR</p>
+                            <p class="cadastrar">CADASTRAR</p>
+                            <p class="finalizar">FINALIZAR</p>
+                        </div>
+                    </form>
+                </article>
+            </section>
+
+            <section class="servicos">
+                <div class="add-service">
+                    <h2>Serviços: </h2>
+                    <div class="botoes">
+                        <p id="botton-service" class="cancelar" onclick="mostrarServicos();">Adicionar serviço</p>
+                    </div>
+                </div>
+
+                <div class="add-service">
+                    <table>
+                        <tr id="titulo">
+                            <td>Serviço</td>
+                            <td>Valor</td>
+                            <td>Editar</td>
+                        </tr>
+                        <tr>
+                            <td>Lavagem simples</td>
+                            <td>R$ 40,00</td>
+                            <td>icon</td>
+                        </tr>
+                        <tr>
+                            <td>Lavagem do motor</td>
+                            <td>R$ 59,99</td>
+                            <td>icon</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="content-total">
+                    <h2>Total: </h2>
+                    <h2 id="">R$ 99,99</h2>
+                </div>
+            </section>
+        </div>
+
+        <div class="inserir-service-fundo">
+            <div class="inserir-service border-circ">
+                <h1>Adicionar serviços</h1>
+                <label for="select-service">Serviço:</label>
+                <select name="select-service">
+                    <option value="">Selecionar...</option>
+                    <option value="">Lavagem simples</option>
+                    <option value="">Lavagem completa</option>
+                    <option value="">Lavagem do motor</option>
+                </select>
+                <label for="dinheiro">Valor:</label>
+                <input type="text" name="dinheiro" placeholder="00,00">
+                <div class="botoes">
+                    <p id="button" class="cancelar" onclick="">CANCELAR</p>
+                    <p id="button" class="cadastrar">CADASTRAR</p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Lava Jato</title>
+        <link href="../css/style-form.css" rel="stylesheet" type="text/css">
+        <script src="../functions/simple-function.js"></script>
+    </head>
+    <body>
+        <section class="border-circ conteiner conteiner-grande content-center">
+            <img src="../imgs/logo.png" id="logo">
+            <article>
+                <h1>Cadastrar Cliente</h1>
+                <form method="get" action="." class="form-em-ajustado">
+                    <div class="caixa-grande">
+                        <label for="nome-cliente">Nome Completo:</label>
+                        <br>
+                        <input type="text" name="nome-cliente" id="nome-cliente">
+                    </div>
+                    
+                    <div class="caixa">
+                        <label for="telefone">Telefone:</label>
+                        <br>
+                        <input type="tel" name="telefone"placeholder="Somente números" id="telefone">
+                    </div>
+
+                    <div class="caixa">
+                        <label for="cpf-cnpj">CPF/CNPJ:</label>
+                        <br>
+                        <input type="number" name="cpf-cnpj"placeholder="Somente números" id="cpf-cnpj">
+                    </div>
+
+                    <div class="caixa">
+                        <label for="cep">CEP:</label>
+                        <br>
+                        <input name="cep" type="text" id="cep" size="8" maxlength="8" onblur="pesquisacep(this.value);"/></label>
+                    </div>
+
+                    <div class="caixa">
+                        <label for="uf">Estado:</label>
+                        <br>
+                        <input type="text" name="uf" id="uf">
+                    </div>
+                    
+                    <div class="caixa">
+                        <label for="cidade">Cidade:</label>
+                        <br>
+                        <input type="text" name="cidade" id="cidade">
+                    </div>
+
+                    <div class="caixa">
+                        <label for="bairro">Bairro:</label>
+                        <br>
+                        <input type="text" name="bairro" id="bairro">
+                    </div>
+
+                    <div class="caixa">
+                        <label for="rua">Logadouro:</label>
+                        <br>
+                        <input type="text" name="rua" id="rua">
+                    </div>
+
+                    <div class="caixa">
+                        <label for="numero">Número:</label>
+                        <br>
+                        <input type="number" name="numero" id="numero">
+                    </div>
+
+                    <div class="caixa-grande">
+                        <label for="complemento">Complemento:</label>
+                        <br>
+                        <input type="text" name="complemento" id="complemento">
+                    </div>
+
+                    <br>
+                    
+                    <span>O CPF/CNPJ do cliente digitado já existe.</span>
+                    <div class="botoes">
+                        <p id="button" class="cancelar" onclick="pagInicial();">CANCELAR</p>
+                        <p id="button" class="cadastrar">CADASTRAR</p>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </body>
+</html>

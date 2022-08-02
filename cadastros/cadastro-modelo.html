@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Lava Jato</title>
+        <link href="../css/style-form.css" rel="stylesheet" type="text/css">
+        <script src="../functions/simple-function.js"></script>
+    </head>
+    <body>
+        <section class="border-circ conteiner content-center">
+            <img src="../imgs/logo.png" id="logo">
+            <article>
+                <h1>Cadastrar Modelo</h1>
+                <form class="form-em-linha">
+                    <label for="select-marca">Selecione a marca:</label>
+                    <br>
+                    <select name="select-marca">
+                        <option value="">Selecionar...</option>
+                        <option value="">Honda</option>
+                        <option value="">Corolla</option>
+                        <option value="">Jeep</option>
+                        <option value="">Fiat</option>
+                        <option value="">Yamaha</option>
+                    </select>
+                    <br>
+                    <label for="nome-marca">Nome do modelo:</label>
+                    <br>
+                    <input type="text" name="nome-marca">
+                    <br>
+                    <span>O modelo já existe.</span>
+                    <div class="botoes">
+                        <p id="button" class="cancelar" onclick="pagInicial();">CANCELAR</p>
+                        <p id="button" class="cadastrar">CADASTRAR</p>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+[
+    {
+        "id": "1",
+        "nome": "Thiago Marques",
+        "telefone": 88993186440,
+        "cpf/cnpj": "00012345678",
+        "cep": 62504070,
+        "estado": "ce",
+        "cidadde":"itapipoca",
+        "bairro": "violete",
+        "rua": "coronel mingueira",
+        "numero": "2339",
+        "complemento": "nenhum"
+    },
+    {
+        "id": "2",
+        "nome": "Thiago Thiago",
+        "telefone": 88993186440,
+        "cpf/cnpj": "00012345678",
+        "cep": 62504070,
+        "estado": "ce",
+        "cidadde":"itapipoca",
+        "bairro": "violete",
+        "rua": "coronel mingueira",
+        "numero": "2339",
+        "complemento": "nenhum"
+    },
+    {
+        "id": "3",
+        "nome": "Marques Marques",
+        "telefone": 88993186440,
+        "cpf/cnpj": "00012345678",
+        "cep": 62504070,
+        "estado": "ce",
+        "cidadde":"itapipoca",
+        "bairro": "violete",
+        "rua": "coronel mingueira",
+        "numero": "2339",
+        "complemento": "nenhum"
+    }
+]
