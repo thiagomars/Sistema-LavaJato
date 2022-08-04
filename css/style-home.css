@@ -190,10 +190,37 @@ form{
     border-radius: 50px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
     padding: 10px;
+    cursor: pointer;
+}
+
+.menu-registro{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid #8C8C8C;
+    border-radius: 50px;
+}
+
+.menu-registro p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    margin: 2% 3% 0 3%;
+    background-color: #f7f7f7;
+}
+
+.menu-registro p img{
+    width: 15px;
 }
 
 .registro img{
@@ -208,9 +235,115 @@ form{
     width: 30%;
 }
 
+.mostrar-mais{
+    width: 100%;
+    text-align: end;
+    cursor: pointer;
+}
 
+.mostrar-mais:hover{
+    text-decoration: underline;
+    color: #8C8C8C;
+}
 
+#icone-menu{
+    display: none;
+}
 
+@media (orientation: portrait){
+    #logo img{
+        width: 35vw;
+        margin: 2vh 0 4vh 0;
+    }
+
+    #icone-menu{
+        display: flex;
+        text-align: end;
+        font-weight: 900;
+        font-size: 1.2em;
+        color: black;
+    }
+
+    h1{
+        font-size: 1.4em;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10%;
+    }
+
+    h2{
+        font-size: 1em;
+    }
+
+    body{
+        font-size: 3em;
+    }
+
+    nav{
+        position: fixed;
+        top: 3%;
+        left: 4%;
+        width: max-content;
+        height: min-content;
+        padding: 20px;
+        border-radius: 40px;
+        background-color: white;
+        box-shadow: 0 0 20px #b3b3b3;
+        z-index: 99999;
+        
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .intro-container{
+        box-shadow: 0 0 10px rgb(235, 235, 235);
+        padding: 10% 0 10% 0;
+    }
+
+    .dashboard{
+        width: 100%;
+        border-right: 1px solid white;
+    }
+
+    .intro{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form{
+        margin-top: 10%;
+        width: 80%;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+    .result{
+        text-align: center;
+    }
+
+    .registro{
+        font-size: 0.8em;
+    }
+
+    .registro img{
+        width: 6%;
+    }
+}
 
 
 

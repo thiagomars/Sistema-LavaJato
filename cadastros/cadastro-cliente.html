@@ -5,6 +5,7 @@
         <title>Lava Jato</title>
         <link href="../css/style-form.css" rel="stylesheet" type="text/css">
         <script src="../functions/simple-function.js"></script>
+        <script src="../functions/clientes.js"></script>
     </head>
     <body>
         <section class="border-circ conteiner conteiner-grande content-center">
@@ -15,7 +16,7 @@
                     <div class="caixa-grande">
                         <label for="nome-cliente">Nome Completo:</label>
                         <br>
-                        <input type="text" name="nome-cliente" id="nome-cliente">
+                        <input type="text" name="nome-cliente" id="nome_cliente">
                     </div>
                     
                     <div class="caixa">
@@ -77,7 +78,7 @@
                     <span>O CPF/CNPJ do cliente digitado já existe.</span>
                     <div class="botoes">
                         <p id="button" class="cancelar" onclick="pagInicial();">CANCELAR</p>
-                        <p id="button" class="cadastrar">CADASTRAR</p>
+                        <p id="button" class="cadastrar" onclick="addCliente();">CADASTRAR</p>
                     </div>
                 </form>
             </article>

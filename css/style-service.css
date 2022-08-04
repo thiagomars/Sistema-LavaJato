@@ -148,10 +148,6 @@ td:last-of-type{
         margin: 1vh 0 2vh 0;
     }
 
-    /* .item-bottom{
-        hei
-    } */
-
     .botoes p{
         width: min-content;
         padding: 2vw 5vw 2vw 5vw;
@@ -204,4 +200,4 @@ td:last-of-type{
         align-items: center;
     }
 
-} 
+}

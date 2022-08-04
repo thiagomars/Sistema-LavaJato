@@ -4,15 +4,24 @@
         <meta charset="utf-8">
         <title>Lava Jato</title>
         <link href="css/style-home.css" rel="stylesheet" type="text/css">
-
+        <link href="css/style-menu.css" rel="stylesheet" type="text/css">
+        
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript" src="functions/jquery-3.6.0.min.js"></script>
-
         <script type="text/javascript" src="functions/simple-function.js"></script>
-
+        <script type="text/javascript" src="functions/menu-person.js"></script>
     </head>
     <body>
-        
+        <div class="menu-person" id="menu-person">
+            <ul>
+                <li><img src="">Editar</li>
+                <li><img src="">Ocultar</li>
+                <hr>
+                <li><img src="imgs/ideia.png">Inicar</li>
+                <li><img src="imgs/verifica.png">Finalizar</li>
+                <li><img src="imgs/cancelar.png">Cancelar</li>
+            </ul>
+        </div>
         <section>
             <header>
                 <div id="logo">
@@ -20,6 +29,7 @@
                 </div>
                 <nav> <!--Menu vertical-->
                     <div>
+                        <p id="icone-menu">=</p>
                         <div class="option" id="clientes">
                             <span class="menu">Meus Clientes</span>
                             <div class="item">
@@ -40,10 +50,9 @@
                         <div class="option" id="service">
                             <span class="menu">Ordem de serviço</span>
                             <div class="item">
-                                <a href="*" class="submenu">Cadastrar</a>
+                                <a href="/cadastros/atendimento.html" class="submenu">Cadastrar</a>
                                 <a href="*" class="submenu">Pendentes</a>
-                                <a href="*" class="submenu">Finalizados</a>
-                                <a href="*" class="submenu">Listar todo histórico</a>
+                                <a href="*" class="submenu">Mostrar todo histórico</a>
                             </div>
                         </div>
                     </div>
@@ -60,14 +69,14 @@
                     <!--Dashboard-->
                     <h1>Serviços mais solicitados</h1>
                     <div id="graficoPizza" style="width: 80%; height: 40%;"></div>
-                    <form>
+                    <form name="filtro">
                         <div class="filter">
                             <label for="inicio">Data inicial:</label>
-                            <input type="date" name="incio">
+                            <input type="date" name="incio" id="filter-data-inicial">
                         </div>
                         <div class="filter">
                             <label for="fim">Data final:</label>
-                            <input type="date" name="fim">
+                            <input type="date" name="fim" id="filter-data-final">
                         </div>
                     </form>
 
@@ -114,6 +123,9 @@
                                 <p>Modelo: Moto</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="mostrar-mais">
+                        <p onclick="mostrarMais();"> >> Mostrar mais 3</p>
                     </div>
                 </div>
             </article>

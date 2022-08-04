@@ -73,19 +73,20 @@ google.charts.load('current', { 'packages': ['corechart'] });
 function desenharPizza() {
 
     var tabela = new google.visualization.DataTable();
-    tabela.addColumn('string', 'categorias');
+    tabela.addColumn('string', 'serviços');
     tabela.addColumn('number', 'valores');
     tabela.addRows([
 
-        ['Educação', 5000],
-        ['Transporte', 5000]
+        ['Lavagem simples', 31],
+        ['Lavagem do motor', 10],
+        ['aaa', 20]
     ]);
 
     var options = {
         backgroundColor: '#f7f7f7',
         pieHole: '0.3',
         pieSliceText: 'label',
-        chartArea:{left:8, top:8, bottom:8, right:9, width:'100%',height:'100%'}
+        chartArea:{left:8, top:8, bottom:8, right:9, width:'100%', height:'100%'}
     }
 
     var grafico = new google.visualization.PieChart(document.getElementById('graficoPizza'));
@@ -103,32 +104,58 @@ function pagInicial(){
     window.location.assign("../index.html");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**
 *  Inicio do trecho em JQUERY
 */
 
 $(document).ready(function(){
+
+    //Menu para display na vertical
+    if($("#icone-menu").is(":visible")){
+        //Iniciar com o menu fechado
+        $(".option").slideUp(0);
+
+        //animação do menu
+        $("#icone-menu").mouseenter(function(){
+            $(".option").slideDown(300);
+
+            $("#clientes").mouseenter(function(){
+                $("#clientes .item").slideDown();
+            });
+            $("#clientes").mouseout(function(){
+                $("#clientes .item").slideUp(300);
+            });
+            
+            $("#carros").mouseenter(function(){
+                $("#carros .item").slideDown();
+            });
+            $("#carros").mouseout(function(){
+                $("#carros .item").slideUp(300);
+            });
+        
+            $("#service").mouseenter(function(){
+                $("#service .item").slideDown();
+            });
+            $("#service").mouseout(function(){
+                $("#service .item").slideUp(300);
+            });
+
+        })
+
+        //recolher menu caso seja clicado fora dele
+        
+        $("nav").mouseleave(function(){
+            $(".option").slideUp(300);
+        })
+    }
+
+    //Menu para display na horizontal
     //iniciar com os submenu's fechados
     $("#clientes .item").slideUp(300);
     $("#carros .item").slideUp(300);
     $("#service .item").slideUp(300);
 
+    //Animação do menu
     $("#clientes").mouseenter(function(){
         $("#clientes .item").slideDown();
     });
@@ -150,12 +177,38 @@ $(document).ready(function(){
         $("#service .item").slideUp(300);
     });
 
-
-
-    
     
     inserirHistorico();
+
+
+
+
+    var agora = new Date();
+    var dia = ("0" + agora.getDate()).slice(-2);
+    var mes = ("0" + (agora.getMonth() + 1)).slice(-2);
+    var dataHoje = agora.getFullYear()+"-"+(mes)+"-"+(dia);
+    $('#filter-data-inicial').val(dataHoje);
+    $('#filter-data-final').val(dataHoje);
+
 });
+
+function mostrarMais(){
+    for(let i = 0; i < 3; i++){
+        $("#history").append = $("#history").append(`
+        <div class="registro">
+            <img src="imgs/ideia.png">
+            <div class="dados-cliente">
+                <p>Cliente: José Santos</p>
+                <p>Serviço: Lavagem Simples</p>
+            </div>
+            <div class="dados-carro">
+                <p>Placa: ABC-1234</p>
+                <p>Modelo: Carro</p>
+            </div>
+        </div>
+    `);
+    }
+}
 
 function inserirHistorico(dados){
     $("#history").append = $("#history").append(`
@@ -177,21 +230,3 @@ function inserirHistorico(dados){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * 
- * Tratando JSON
- */
